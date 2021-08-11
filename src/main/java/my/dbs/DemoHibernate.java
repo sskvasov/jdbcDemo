@@ -15,10 +15,10 @@ public class DemoHibernate {
         List<Product> products = session.createQuery(hql).setParameter("p1", filter + "%").list();
         products.forEach(p -> System.out.println(p.getName() + " " + p.getPrice()));
 
-        Product p=products.get(0);
-        p.setPrice(123.0);
-        session.beginTransaction();
-        session.save(p);
-        session.getTransaction().commit();//ошибка прав доступ, запрос верный
+//        Product p=products.get(0);
+//        p.setPrice(123.0);
+//        session.beginTransaction();
+//        session.save(p);
+//        session.getTransaction().commit();//ошибка прав доступ, запрос верный
     }
 }
