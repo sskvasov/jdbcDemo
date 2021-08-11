@@ -21,8 +21,6 @@
         <property name="hibernate.connection.password">
             northwind
         </property>
-        <mapping class="my.dbs.Product">
-
-        </mapping>
+        <mapping class="my.dbs.Product"></mapping>
     </session-factory>
 </hibernate-configuration>

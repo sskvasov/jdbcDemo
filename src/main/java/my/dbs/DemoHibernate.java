@@ -14,5 +14,11 @@ public class DemoHibernate {
         String hql = "SELECT p FROM Product p WHERE p.name LIKE :p1";
         List<Product> products = session.createQuery(hql).setParameter("p1", filter + "%").list();
         products.forEach(p -> System.out.println(p.getName() + " " + p.getPrice()));
+
+        Product p=products.get(0);
+        p.setPrice(123.0);
+        session.beginTransaction();
+        session.save(p);
+        session.getTransaction().commit();//ошибка прав доступ, запрос верный
     }
 }
