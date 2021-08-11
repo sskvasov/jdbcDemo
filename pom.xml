@@ -54,6 +54,10 @@
                         <mainClass>
                             my.dbs.DemoHibernate
                         </mainClass>
+                        <addClasspath>true</addClasspath>
+                        <classpathPrefix>
+                            lib/
+                        </classpathPrefix>
                     </manifest>
                 </archive>
             </configuration>
